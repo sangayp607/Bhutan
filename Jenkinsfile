@@ -2,24 +2,19 @@ pipeline {
     agent any
        
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello Everybody'
+                echo 'For building'
             }
         }
-        stage('Good Morning') {
+        stage('Test') {
             steps {
-                echo 'Good Morning Everybody'
+                echo 'For testing'
             }
         }
-        stage('git pull') {
+        stage('Deploy') {
             steps {
-                sh 'git pull origin master'
-            }
-        }
-         stage('Display') {
-            steps {
-                sh 'cat file1'
+                echo 'For deployment'
             }
         }
     }
